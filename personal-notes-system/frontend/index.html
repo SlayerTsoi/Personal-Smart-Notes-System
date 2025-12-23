@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人智能笔记系统 | Personal Smart Notes</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Top navigation bar -->
+    <div class="top-nav">
+        <div class="logo">
+            <i class="material-icons">note</i>
+            <h1 id="appTitle">个人智能笔记系统</h1>
+        </div>
+        <div class="language-switcher">
+            <button class="lang-btn active" id="zhBtn">中文</button>
+            <button class="lang-btn" id="enBtn">English</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="search-box">
+                <i class="material-icons">search</i>
+                <input type="text" id="searchInput" placeholder="搜索笔记...">
+            </div>
+            
+            <div class="notes-list" id="notesList">
+                <!-- The note list will be dynamically generated using JS. -->
+            </div>
+            
+            <button class="new-note-btn" id="newNoteBtn">
+                <i class="material-icons">add</i>
+                <span id="newNoteText">新建笔记</span>
+            </button>
+        </div>
+        
+        <!-- Main content area -->
+        <div class="main-content">
+            <div class="note-editor" id="noteEditor">
+                <div class="empty-state" id="emptyState">
+                    <i class="material-icons">note_add</i>
+                    <h2 id="emptyTitle">选择笔记或创建新笔记</h2>
+                    <p id="emptyDescription">点击左侧笔记列表中的项目或创建新笔记开始记录</p>
+                </div>
+                
+                <div class="editor-header" style="display: none;" id="editorHeader">
+                    <input type="text" class="editor-title" id="noteTitle" placeholder="笔记标题">
+                    <div class="editor-actions">
+                        <button class="action-btn tag-btn" id="tagBtn">
+                            <i class="material-icons">local_offer</i>
+                            <span id="tagText">标签</span>
+                        </button>
+                        <button class="action-btn delete-btn" id="deleteBtn">
+                            <i class="material-icons">delete</i>
+                            <span id="deleteText">删除</span>
+                        </button>
+                        <button class="action-btn save-btn" id="saveBtn">
+                            <i class="material-icons">save</i>
+                            <span id="saveText">保存</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="editor-body" style="display: none;" id="editorBody">
+                    <textarea class="editor-textarea" id="noteContent" placeholder="开始输入笔记内容..."></textarea>
+                </div>
+                
+                <div class="editor-footer" style="display: none;" id="editorFooter">
+                    <div class="note-info">
+                        <span id="lastEditedText">最后编辑: </span>
+                        <span id="lastEdited">刚刚</span>
+                    </div>
+                    <div class="status-tag" id="statusTag">
+                        <span id="statusText">普通</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
