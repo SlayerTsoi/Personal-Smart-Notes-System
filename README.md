@@ -8,18 +8,21 @@ Modern web browser
 Installation
 Clone the repository
 
-bash
+```bash
 git clone https://github.com/yourusername/personal-notes-system.git
 cd personal-notes-system
 Set up the backend
+```
 
-bash
+```bash
 cd backend
 pip install -r requirements.txt
+```
 Start the server
 
-bash
+```bash
 python app.py
+```
 Access the application
 
 Open your browser and go to http://localhost:5000
@@ -39,7 +42,7 @@ DELETE	/notes/{id}	Delete a note
 Example Requests
 Create a new note:
 
-bash
+```bash
 curl -X POST http://localhost:5000/api/notes \
   -H "Content-Type: application/json" \
   -d '{
@@ -47,10 +50,12 @@ curl -X POST http://localhost:5000/api/notes \
     "content": "Discussed project timeline",
     "status": "important"
   }'
+```
 Get all notes:
 
-bash
+```bash
 curl http://localhost:5000/api/notes
+```
 💻 Development
 Frontend Development
 The frontend is built with vanilla HTML, CSS, and JavaScript. To modify:
@@ -75,10 +80,11 @@ Update frontend JavaScript to use new endpoints
 Test with Postman or curl
 
 Running in Development Mode
-bash
+```bash
 cd backend
 export FLASK_ENV=development
 python app.py
+```
 🧪 Testing
 Manual Testing
 Create notes: Click "New Note" and type content
@@ -94,12 +100,13 @@ Switch language: Click language buttons
 API Testing
 Use curl or Postman to test API endpoints:
 
-bash
+```bash
 # Test API health
 curl http://localhost:5000/health
 
 # Test notes endpoint
 curl http://localhost:5000/api/notes
+```
 📱 Usage Guide
 Creating Notes
 Click "New Note" button
@@ -144,20 +151,23 @@ Fork the repository
 
 Create a feature branch
 
-bash
+```bash
 git checkout -b feature/amazing-feature
+```
 Make your changes
 
 Test your changes
 
 Commit your changes
 
-bash
+```bash
 git commit -m 'Add amazing feature'
+```
 Push to the branch
 
-bash
+```bash
 git push origin feature/amazing-feature
+```
 Open a Pull Request
 
 Areas for Contribution
